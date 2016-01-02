@@ -65,11 +65,11 @@ module.exports = generators.Base.extend({
       }, {
         name: 'Bootstrap',
         value: 'includeBootstrap',
-        checked: true
+        checked: false
       }, {
         name: 'Modernizr',
         value: 'includeModernizr',
-        checked: true
+        checked: false
       }]
     }, {
       type: 'confirm',
@@ -194,32 +194,14 @@ module.exports = generators.Base.extend({
         this.templatePath('favicon.ico'),
         this.destinationPath('app/favicon.ico')
       );
-
-      this.fs.copy(
-        this.templatePath('apple-touch-icon.png'),
-        this.destinationPath('app/apple-touch-icon.png')
-      );
-
-      this.fs.copy(
-        this.templatePath('robots.txt'),
-        this.destinationPath('app/robots.txt'));
     },
 
     styles: function () {
-      var css = 'main';
+      var css = 'main.css';
 
-      if (this.includeSass) {
-        css += '.scss';
-      } else {
-        css += '.css';
-      }
-
-      this.fs.copyTpl(
-        this.templatePath(css),
-        this.destinationPath('app/styles/' + css),
-        {
-          includeBootstrap: this.includeBootstrap
-        }
+      this.fs.copy(
+        this.templatePath('styles'),
+        this.destinationPath('app/styles/')
       );
     },
 

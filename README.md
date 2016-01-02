@@ -2,8 +2,6 @@
 
 > [Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app using [gulp](http://gulpjs.com/) for the build process
 
-![](screenshot.png)
-
 
 ## Features
 
@@ -20,18 +18,10 @@ Please see our [gulpfile](app/templates/gulpfile.babel.js) for up to date inform
 
 *For more information on what this generator can do for you, take a look at the [gulp plugins](app/templates/_package.json) used in our `package.json`.*
 
-
-## libsass
-
-Keep in mind that libsass is feature-wise not fully compatible with Ruby Sass. Check out [this](http://sass-compatibility.github.io) curated list of incompatibilities to find out which features are missing.
-
-If your favorite feature is missing and you really need Ruby Sass, you can always switch to [gulp-ruby-sass](https://github.com/sindresorhus/gulp-ruby-sass) and update the `styles` task in gulpfile accordingly.
-
-
 ## Getting Started
 
 - Install dependencies: `npm install --global yo gulp bower`
-- Install the generator: `npm install --global generator-gulp-webapp`
+- Install the generator: `npm install --global https://github.com/roya3000/generator-gulp-roya.git`
 - Run `yo gulp-webapp` to scaffold your webapp
 - Run `gulp serve` to preview and watch for changes
 - Run `bower install --save <package>` to install frontend dependencies
